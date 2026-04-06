@@ -7,7 +7,7 @@
   "deploy": {
     "startCommand": "java -Xmx400M -Xms400M -jar target/*.jar",
     "restartPolicyType": "ON_FAILURE",
-    "healthcheckPath": "/health",
+    "healthcheckPath": null,
     "healthcheckTimeout": 100
   }
 }
