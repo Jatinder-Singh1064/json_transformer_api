@@ -87,4 +87,9 @@ public class ConverterController {
         // only YOU (the admin) can see this.
         return apiKeyService.getAllUsageReports();
     }
+
+    @GetMapping("/health")
+    public String healthCheck() {
+        return "UP";
+    }
 }
