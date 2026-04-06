@@ -1,0 +1,23 @@
+# 1. Server Configuration
+server.port=8080
+
+# 2. File and Payload limits (Important for large JSON/CSV files)
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
+
+# 3. Database Configuration
+# If using a local PostgreSQL, replace 'localhost' and 'dbname'
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
+spring.datasource.username=your_user
+spring.datasource.password=REPLACE_ME
+spring.jpa.show-sql=true
+
+# Allow Hibernate to create the 'users' table automatically
+spring.jpa.hibernate.ddl-auto=update
+
+# 4. Security
+# Disabling default basic auth so you can test your API easily
+#spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+
+
+app.max.usage.limit=20

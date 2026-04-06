@@ -1,0 +1,110 @@
+{
+  "info": {
+    "_postman_id": "402471c0-0aa4-4e9e-ae13-68d19b1fb00f",
+    "name": "micro_saas_app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "20110529"
+  },
+  "item": [
+    {
+      "name": "json-to-csv",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "sk_MGf0evkgKCaXjBZBQ6eVOOU9oVUp8O2t",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  {\"id\": 1, \"name\": \"Nassim Taleb\", \"book\": \"Fooled by Randomness\"},\r\n  {\"id\": 2, \"name\": \"Warren Buffett\", \"book\": \"The Snowball\"}\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/json-to-csv",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "json-to-csv"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/register?email=tester@example.com",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "register"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "tester@example.com"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin-usage",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "sk_MGf0evkgKCaXjBZBQ6eVOOU9oVUp8O2t",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/admin/usage",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "admin",
+            "usage"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "API-KEY-VALUE",
+      "value": ""
+    }
+  ]
+}
