@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "java -Xmx400M -Xms400M -jar target/*.jar",
+    "restartPolicyType": "ON_FAILURE",
+    "healthcheckPath": "/api/v1/admin/usage",
+    "healthcheckTimeout": 100
+  }
+}
